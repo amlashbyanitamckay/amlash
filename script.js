@@ -3,7 +3,7 @@
 // ===============================
 const CONFIG = {
   booksyUrl: "https://booksy.com/",        // <-- wklej tutaj pełny link do Twojego profilu Booksy
-  instagramUrl: "https://instagram.com/",  // <-- wklej tutaj pełny link do Instagrama
+  instagramUrl: "https://www.instagram.com/amlash_by_anita_mckay/",  // <-- wklej tutaj pełny link do Instagrama
   instagramLabel: "@amlash"                // <-- wpisz swój właściwy @nick
 };
 

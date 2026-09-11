@@ -3,16 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- SEO: podstawowe -->
-  <title>Stylizacja rzęs Warszawa | Przedłużanie i laminacja | AMLASH</title>
+<title>Stylizacja rzęs Warszawa | Przedłużanie i laminacja | AMLASH</title>
   <meta name="description" content="AMLASH Warszawa — przedłużanie i stylizacja rzęs 1:1, 2–3D, Soft Volume, Wet Look, Kim/Wispy oraz laminacja rzęs i brwi. Sprawdź portfolio i umów wizytę." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="AMLASH" />
   <link rel="canonical" href="https://TWOJA-DOMENA.pl/" />
-
-  <!-- SEO: social / udostępnianie -->
-  <meta property="og:locale" content="pl_PL" />
+<meta property="og:locale" content="pl_PL" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="AMLASH" />
   <meta property="og:title" content="Stylizacja rzęs Warszawa | AMLASH" />
@@ -29,13 +25,74 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!--
-    Nie dodajemy meta keywords ani niewidocznych bloków słów kluczowych.
-    Google nie potrzebuje takiej listy. Frazy SEO są użyte naturalnie
-    w nagłówkach, opisach usług, ALT-ach i danych strukturalnych.
-  -->
+  <style>
+    .social-tiles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      width: 100%;
+      margin-top: 28px;
+    }
 
-  <script type="application/ld+json">
+    .social-tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+      padding: 18px 20px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      color: inherit;
+      text-decoration: none;
+      font: inherit;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .social-tile:hover,
+    .social-tile:focus-visible {
+      transform: translateY(-2px);
+      opacity: .72;
+    }
+
+    .booking-inner > h2 {
+      margin-top: 0;
+    }
+
+    .contact-footer {
+      padding: 28px 0;
+    }
+
+    .contact-footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 28px;
+    }
+
+    .contact-footer a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+    }
+
+    .contact-footer a:hover,
+    .contact-footer a:focus-visible {
+      opacity: .7;
+    }
+
+    @media (max-width: 700px) {
+      .social-tiles {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-footer-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -65,6 +122,7 @@
           {"@type": "City", "name": "Warszawa"},
           {"@type": "AdministrativeArea", "name": "Wawer"}
         ],
+        "sameAs": ["https://www.instagram.com/amlash/"],
         "knowsAbout": [
           "stylizacja rzęs",
           "przedłużanie rzęs",
@@ -361,28 +419,43 @@
 
     <section class="booking-section" id="kontakt">
       <div class="section-shell booking-inner reveal">
-        <p class="section-kicker">REZERWACJA</p>
-        <h2>Gotowa na swoje<br><em>nowe spojrzenie?</em></h2>
-        <p>Wybierz dogodny termin online. Jeśli nie wiesz, którą stylizację wybrać - napisz do mnie.</p>
+        <h2>Rezerwacja</h2>
+        <p>Wybierz dogodny termin online. Jeśli nie wiesz, którą stylizację wybrać — napisz do mnie.</p>
+
         <div class="booking-actions">
-          <a class="button button-dark js-booksy" href="#" target="_blank" rel="noopener">Umów wizytę</a>
-          <a class="button button-outline js-instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a class="button button-dark js-booksy" href="#" target="_blank" rel="noopener">Umów wizytę w Booksy</a>
         </div>
 
-        <div class="contact-grid">
-          <div><span>LOKALIZACJA</span><strong>Warszawa</strong></div>
-          <div><span>INSTAGRAM</span><strong class="js-instagram-label">@amlash</strong></div>
-          <div><span>REZERWACJE</span><strong>Booksy</strong></div>
+        <div class="social-tiles" aria-label="AMLASH w mediach społecznościowych">
+          <a class="social-tile js-instagram" href="https://www.instagram.com/amlash/" target="_blank" rel="noopener" aria-label="Instagram AMLASH">
+            Instagram
+          </a>
+
+          <a class="social-tile" href="https://www.facebook.com/UZUPELNIJ_PROFIL_AMLASH" target="_blank" rel="noopener" aria-label="Facebook AMLASH">
+            Facebook
+          </a>
+
+          <a class="social-tile" href="https://www.tiktok.com/@UZUPELNIJ_PROFIL_AMLASH" target="_blank" rel="noopener" aria-label="TikTok AMLASH">
+            TikTok
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="section-shell footer-inner">
-      <img src="assets/logo-amlash.svg" alt="AMLASH" />
-      <p>© <span id="year"></span> AMLASH. Wszystkie prawa zastrzeżone.</p>
-      <a href="#top">Do góry ↑</a>
+  <footer class="site-footer contact-footer">
+    <div class="section-shell contact-footer-inner">
+      <a href="tel:+48UZUPELNIJ_NUMER" aria-label="Zadzwoń do AMLASH">
+        +48 UZUPEŁNIJ NUMER
+      </a>
+
+      <a href="mailto:UZUPELNIJ_EMAIL" aria-label="Napisz e-mail do AMLASH">
+        UZUPEŁNIJ E-MAIL
+      </a>
+
+      <a href="https://wa.me/48UZUPELNIJ_NUMER" target="_blank" rel="noopener" aria-label="Napisz do AMLASH na WhatsApp">
+        WhatsApp
+      </a>
     </div>
   </footer>
 

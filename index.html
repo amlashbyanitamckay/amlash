@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap&subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="amlash_css_v3.css" />
+  <link rel="stylesheet" href="amlash_css_v4.css" />
 
   <script type="application/ld+json">
   {
@@ -43,7 +43,7 @@
 <body>
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="AMLASH — strona główna">
-      <img src="assets/Logo.png" alt="AMLASH" />
+      <img src="assets/logo-amlash.svg" alt="AMLASH" />
     </a>
 
     <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
@@ -64,9 +64,9 @@
   <main>
     <section class="hero section-shell">
       <div class="hero-copy reveal">
-        <h1 class="hero-service-title">
-          <span>STYLIZACJA RZĘS I BRWI</span>
-          <small>WARSZAWA</small>
+        <h1 class="signature-heading hero-service-title">
+          <span>Stylizacja rzęs i brwi</span>
+          <em>Warszawa</em>
         </h1>
 
         <p class="hero-brand-line">AMLASH <span>by Anita Mc Kay</span></p>
@@ -103,7 +103,7 @@
     <section class="section section-shell intro reveal">
       <p class="section-kicker"><strong>AMLASH</strong></p>
       <div class="intro-grid">
-        <h2>Stylizacja dopasowana <em>do Ciebie.</em></h2>
+        <h2 class="signature-heading">Stylizacja dopasowana <em>do Ciebie.</em></h2>
         <div>
           <p>
             Kształt oka, naturalne rzęsy, brwi, rysy twarzy i efekt, w którym czujesz się najlepiej —
@@ -118,8 +118,10 @@
       <div class="section-shell">
         <div class="section-heading section-heading-actions reveal">
           <div>
-            <h2 class="primary-section-title">PORTFOLIO</h2>
-            <p class="section-subtitle">Moje stylizacje</p>
+            <h2 class="signature-heading section-signature">
+              <span>Portfolio</span>
+              <em>Moje stylizacje</em>
+            </h2>
           </div>
 
           <div class="heading-actions">
@@ -168,8 +170,10 @@
       <div class="section-shell">
         <div class="section-heading reveal">
           <div>
-            <h2 class="primary-section-title">OFERTA I CENNIK</h2>
-            <p class="section-subtitle">Wybierz swój efekt</p>
+            <h2 class="signature-heading section-signature">
+              <span>Oferta i cennik</span>
+              <em>Wybierz swój efekt</em>
+            </h2>
           </div>
           <p class="section-sidecopy">Pełna dostępność terminów i szczegóły usług znajdują się w Booksy.</p>
         </div>
@@ -225,9 +229,8 @@
         </div>
 
         <div class="about-copy reveal">
-          <h2 class="primary-section-title">O MNIE</h2>
+          <h2 class="signature-heading section-signature">O mnie</h2>
           <p class="about-name-secondary">Anita Mc Kay</p>
-          <p class="about-brand"><strong>AMLASH</strong></p>
 
           <p>
             AMLASH to moje miejsce stworzone z myślą o kobietach, które chcą podkreślić swoją urodę
@@ -251,8 +254,10 @@
     <section class="section faq-section" id="faq">
       <div class="section-shell faq-grid">
         <div class="reveal">
-          <h2 class="primary-section-title">FAQ</h2>
-          <p class="section-subtitle">Przed wizytą i po stylizacji</p>
+          <h2 class="signature-heading section-signature">
+            <span>FAQ</span>
+            <em>Przed wizytą i po stylizacji</em>
+          </h2>
           <p>
             Możesz przyjść do mnie zarówno na pojedynczą usługę, jak i na pełną stylizację oprawy oka:
             rzęsy i brwi.
@@ -358,7 +363,7 @@
 
     <section class="booking-section" id="kontakt">
       <div class="section-shell booking-inner reveal">
-        <h2 class="primary-section-title contact-title">KONTAKT I REZERWACJE</h2>
+        <h2 class="signature-heading section-signature contact-title">Kontakt i rezerwacje</h2>
         <p class="contact-brand">AMLASH · Anita Mc Kay</p>
 
         <p>Umów wizytę online albo skontaktuj się ze mną bezpośrednio.</p>
@@ -366,6 +371,7 @@
         <div class="booking-actions">
           <a class="button button-dark js-booksy" href="#" target="_blank" rel="noopener">UMÓW WIZYTĘ</a>
           <a class="button button-outline js-instagram" href="https://www.instagram.com/amlash_by_anita_mckay/" target="_blank" rel="noopener">INSTAGRAM</a>
+          <a class="button button-outline js-tiktok tiktok-placeholder" href="#" data-tiktok-url="" onclick="return false;" aria-label="TikTok AMLASH — link do uzupełnienia">TIKTOK</a>
           <a class="button button-outline" href="https://www.facebook.com/profile.php?id=61573008991084&sk=about" target="_blank" rel="noopener">FACEBOOK</a>
         </div>
 
@@ -391,6 +397,11 @@
           </div>
 
           <div>
+            <span>TIKTOK</span>
+            <strong><a class="js-tiktok tiktok-placeholder" href="#" data-tiktok-url="" onclick="return false;" aria-label="TikTok AMLASH — link do uzupełnienia">TikTok AMLASH</a></strong>
+          </div>
+
+          <div>
             <span>FACEBOOK</span>
             <strong><a href="https://www.facebook.com/profile.php?id=61573008991084&sk=about" target="_blank" rel="noopener">AMLASH na Facebooku</a></strong>
           </div>
@@ -412,7 +423,7 @@
       <div class="footer-links">
         <a class="js-booksy" href="#" target="_blank" rel="noopener"><strong>UMÓW WIZYTĘ</strong></a>
         <a class="js-instagram" href="https://www.instagram.com/amlash_by_anita_mckay/" target="_blank" rel="noopener">Instagram</a>
-        <a class="footer-social tiktok-link" href="#" aria-label="TikTok AMLASH — link do uzupełnienia">TikTok</a>
+        <a class="footer-social tiktok-link tiktok-placeholder" href="#" data-tiktok-url="" onclick="return false;" aria-label="TikTok AMLASH — link do uzupełnienia">TikTok</a>
         <a href="https://www.facebook.com/profile.php?id=61573008991084&sk=about" target="_blank" rel="noopener">Facebook</a>
         <a href="mailto:kontakt@amlash.pl">Kontakt</a>
         <a href="#top">Do góry ↑</a>

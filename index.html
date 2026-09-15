@@ -225,43 +225,17 @@
       text-align: center;
     }
 
-    /* Portfolio: dwa czarne prostokątne kafelki pod zdjęciami */
+    /* Portfolio: CTA identyczne jak przyciski w sekcji O mnie */
     .portfolio-bottom-actions {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(220px, 1fr));
-      gap: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 18px;
       margin-top: 30px;
     }
-    .portfolio-bottom-actions .heading-action {
-      position: relative;
-      min-height: 84px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px 48px 18px 20px;
-      background: var(--ink);
-      color: #fff;
-      border: 1px solid var(--ink);
-      border-radius: 0;
-      text-align: center;
-    }
-    .portfolio-bottom-actions .tile-label {
-      font-size: 12px;
-      font-weight: 650;
-      letter-spacing: .10em;
-      text-transform: uppercase;
-    }
-    .portfolio-bottom-actions .tile-sub {
-      margin-left: .45em;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 20px;
-      font-style: italic;
-    }
-    .portfolio-bottom-actions .tile-arrow {
-      position: absolute;
-      top: 12px;
-      right: 15px;
-      font-size: 18px;
+    .portfolio-bottom-actions .button {
+      min-width: 0;
     }
 
     /* Klikalność portfolio */
@@ -388,6 +362,13 @@
       .contact-social-tiles { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
     @media (max-width: 600px) {
+      .portfolio-bottom-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+      .portfolio-bottom-actions .button {
+        width: 100%;
+      }
       .hero-actions { flex-direction: column; }
       .hero-actions .button-dark,
       .hero-actions .hero-secondary-cta { width: 100%; }
@@ -449,7 +430,7 @@
       </div>
 
       <div class="hero-visual reveal reveal-delay">
-        <img src="assets/stylizacja-rzes-warszawa-amlash.png" alt="Stylizacja rzęs w Warszawie — efekt wykonany w AMLASH by Anita Mc Kay" loading="eager" fetchpriority="high" decoding="async" />
+        <img src="assets/1.png" alt="Stylizacja rzęs w Warszawie — efekt wykonany w AMLASH by Anita Mc Kay" loading="eager" fetchpriority="high" decoding="async" />
       </div>
     </section>
 
@@ -520,8 +501,8 @@
           </figure>
         </div>
         <div class="portfolio-bottom-actions reveal">
-          <a class="heading-action js-booksy" href="#" target="_blank" rel="noopener"><span class="tile-label">UMÓW WIZYTĘ</span><span class="tile-arrow" aria-hidden="true">↗</span></a>
-            <a class="heading-action js-instagram" href="https://www.instagram.com/amlash_by_anita_mckay/" target="_blank" rel="noopener"><span class="tile-label">WIĘCEJ ZDJĘĆ</span><span class="tile-sub">Instagram</span><span class="tile-arrow" aria-hidden="true">↗</span></a>
+          <a class="button button-dark js-booksy" href="#" target="_blank" rel="noopener">UMÓW WIZYTĘ</a>
+          <a class="button button-outline js-instagram" href="https://www.instagram.com/amlash_by_anita_mckay/" target="_blank" rel="noopener">WIĘCEJ ZDJĘĆ NA INSTAGRAMIE</a>
         </div>
       </div>
     </section>

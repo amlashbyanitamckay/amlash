@@ -269,7 +269,7 @@
       margin-top: 38px;
     }
     .visit-location {
-      width: min(720px, 100%);
+      width: min(980px, 100%);
       margin: 34px auto 0;
       padding: 25px 28px;
       display: grid;
@@ -278,17 +278,20 @@
       border-top: 1px solid rgba(33,29,26,.22);
       border-bottom: 1px solid rgba(33,29,26,.22);
     }
+
     .visit-location__label {
       margin-bottom: 8px;
       font-size: 9px;
       font-weight: 700;
       letter-spacing: .17em;
     }
+
     .visit-location strong {
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 30px;
       font-weight: 500;
     }
+
     .visit-location span:not(.visit-location__label) {
       font-size: 13px;
     }
@@ -305,20 +308,61 @@
       text-decoration: underline;
     }
 
+    .visit-location__details {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(250px, 2fr);
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 20px;
+      text-align: left;
+    }
+
     .visit-location__map {
-      width: 100%;
-      margin-top: 18px;
+      position: relative;
+      min-height: 260px;
       overflow: hidden;
       border: 1px solid var(--line);
-      aspect-ratio: 16 / 7;
-      min-height: 220px;
     }
 
     .visit-location__map iframe {
       display: block;
       width: 100%;
       height: 100%;
+      min-height: 260px;
       border: 0;
+      pointer-events: none;
+    }
+
+    .visit-location__map-link {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+
+    .visit-location__travel {
+      display: grid;
+      align-content: center;
+      gap: 26px;
+      padding: 8px 0 8px 28px;
+      border-left: 1px solid rgba(33,29,26,.18);
+    }
+
+    .visit-location__travel-block {
+      display: grid;
+      gap: 6px;
+    }
+
+    .visit-location__travel-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .17em;
+    }
+
+    .visit-location__travel p {
+      margin: 0;
+      color: #5c514a;
+      font-size: 13px;
+      line-height: 1.7;
     }
 
     /* Lightbox — duże zdjęcie na całym ekranie */
@@ -402,6 +446,13 @@
       .hero-actions .hero-secondary-cta { width: 100%; }
       .portfolio-bottom-actions { grid-template-columns: 1fr; }
       .contact-social-tiles { grid-template-columns: 1fr; }
+      .visit-location { padding: 24px 18px; }
+      .visit-location__details { grid-template-columns: 1fr; gap: 20px; }
+      .visit-location__travel {
+        padding: 20px 0 0;
+        border-left: 0;
+        border-top: 1px solid rgba(33,29,26,.18);
+      }
       .portfolio-lightbox__image { max-width: 96vw; max-height: 78vh; }
     }
   </style>
@@ -753,21 +804,37 @@
              aria-label="Otwórz adres Poligonowa 1, lokal U1 w Mapach Google">
             Poligonowa 1, lokal U1
           </a>
-          <span>Gocław · 04-051 Warszawa</span>
+          <span>04-051 Warszawa</span>
 
-          <a class="visit-location__map"
-             href="https://www.google.com/maps/search/?api=1&query=Poligonowa+1%2C+lokal+U1%2C+04-051+Warszawa"
-             target="_blank"
-             rel="noopener"
-             aria-label="Otwórz lokalizację AMLASH w Mapach Google">
-            <iframe
-              title="Mapa dojazdu — Twój Styl Studio Urody, Poligonowa 1, Warszawa"
-              src="https://www.google.com/maps?q=Poligonowa+1%2C+04-051+Warszawa&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
-          </a>
+          <div class="visit-location__details">
+            <div class="visit-location__map">
+              <iframe
+                title="Mapa dojazdu — Twój Styl Studio Urody, Poligonowa 1, Warszawa"
+                src="https://www.google.com/maps?q=Poligonowa+1%2C+04-051+Warszawa&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+              <a class="visit-location__map-link"
+                 href="https://www.google.com/maps/search/?api=1&query=Poligonowa+1%2C+lokal+U1%2C+04-051+Warszawa"
+                 target="_blank"
+                 rel="noopener"
+                 aria-label="Otwórz lokalizację AMLASH w Mapach Google"></a>
+            </div>
+
+            <div class="visit-location__travel">
+              <div class="visit-location__travel-block">
+                <span class="visit-location__travel-title">DOJAZD</span>
+                <p>Kompasowa 01 i 02 · ok. 1–2 min pieszo</p>
+                <p>Kakowskiego 01 i 02 · ok. 3 min pieszo</p>
+              </div>
+
+              <div class="visit-location__travel-block">
+                <span class="visit-location__travel-title">PARKING</span>
+                <p>Ogólnodostępne miejsca parkingowe w bezpośredniej okolicy budynku.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="booking-actions contact-social-tiles">

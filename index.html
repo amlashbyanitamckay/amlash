@@ -293,6 +293,34 @@
       font-size: 13px;
     }
 
+    .visit-location__address {
+      color: inherit;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .visit-location__address:hover,
+    .visit-location__address:focus-visible {
+      text-decoration: underline;
+    }
+
+    .visit-location__map {
+      width: 100%;
+      margin-top: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      aspect-ratio: 16 / 7;
+      min-height: 220px;
+    }
+
+    .visit-location__map iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     /* Lightbox — duże zdjęcie na całym ekranie */
     body.lightbox-open { overflow: hidden; }
     .portfolio-lightbox {
@@ -718,8 +746,28 @@
         <div class="visit-location" aria-label="Miejsce wizyty AMLASH">
           <span class="visit-location__label">MIEJSCE WIZYTY</span>
           <strong>Twój Styl Studio Urody</strong>
-          <span>Poligonowa 1, lokal U1</span>
+          <a class="visit-location__address"
+             href="https://www.google.com/maps/search/?api=1&query=Poligonowa+1%2C+lokal+U1%2C+04-051+Warszawa"
+             target="_blank"
+             rel="noopener"
+             aria-label="Otwórz adres Poligonowa 1, lokal U1 w Mapach Google">
+            Poligonowa 1, lokal U1
+          </a>
           <span>Gocław · 04-051 Warszawa</span>
+
+          <a class="visit-location__map"
+             href="https://www.google.com/maps/search/?api=1&query=Poligonowa+1%2C+lokal+U1%2C+04-051+Warszawa"
+             target="_blank"
+             rel="noopener"
+             aria-label="Otwórz lokalizację AMLASH w Mapach Google">
+            <iframe
+              title="Mapa dojazdu — Twój Styl Studio Urody, Poligonowa 1, Warszawa"
+              src="https://www.google.com/maps?q=Poligonowa+1%2C+04-051+Warszawa&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </a>
         </div>
 
         <div class="booking-actions contact-social-tiles">

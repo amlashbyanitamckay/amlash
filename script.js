@@ -2,7 +2,7 @@
 // AMLASH — EDYTUJ TYLKO TE DANE
 // ===============================
 const CONFIG = {
-  booksyUrl: "amlashbyanitamckay.booksy.com/k",        // <-- wklej tutaj pełny link do Twojego profilu Booksy
+  booksyUrl: " "https://amlashbyanitamckay.booksy.com/",        // <-- wklej tutaj pełny link do Twojego profilu Booksy
   instagramUrl: "https://www.instagram.com/amlash_by_anita_mckay/",  // <-- wklej tutaj pełny link do Instagrama
   instagramLabel: "@amlash_by_anita_mckay"                // <-- wpisz swój właściwy @nick
 };

@@ -107,6 +107,21 @@ button{font:inherit}
 }
 
 .portfolio-section{background:var(--cream)}
+.portfolio-intro-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  margin-bottom:18px;
+}
+
+.portfolio-intro-row .portfolio-intro{
+  margin:0;
+}
+
+.portfolio-intro-row .button{
+  flex-shrink:0;
+}
 .section-heading{
   display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:52px
 }
@@ -241,6 +256,14 @@ details p{max-width:730px;margin:16px 0 2px;color:var(--muted);line-height:1.7;f
 }
 
 @media (max-width:600px){
+   .portfolio-intro-row{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.portfolio-intro-row .button{
+  width:100%;
+}
   .hero-actions,.booking-actions{align-items:stretch;flex-direction:column}
   .hero-actions .text-link{align-self:flex-start}
   .portfolio-grid{gap:28px 12px}
